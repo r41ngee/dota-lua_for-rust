@@ -1,4 +1,4 @@
-#[repr(u32)]
+#[repr(i32)]
 #[allow(non_camel_case_types)]
 pub enum ModifierFunction {
     MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE = 0,
