@@ -21,13 +21,13 @@ name = "dota-lua-core"
 version = "0.1.0"
 dependencies = [
  "bitflags",
- "dota-lua-macros",
 ]
 
 [[package]]
 name = "dota-lua-macros"
 version = "0.1.0"
 dependencies = [
+ "dota-lua-core",
  "proc-macro2",
 ]
 

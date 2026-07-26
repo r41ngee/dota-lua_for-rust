@@ -7,4 +7,5 @@ edition = "2024"
 proc-macro = true
 
 [dependencies]
+dota-lua-core = { version = "0.1.0", path = "../dota-lua-core" }
 proc-macro2 = "1"
