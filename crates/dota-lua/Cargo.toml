@@ -6,3 +6,4 @@ edition = "2024"
 [dependencies]
 dota-lua-core = { version = "0.1.0", path = "../dota-lua-core" }
 dota-lua-macros = { version = "0.1.0", path = "../dota-lua-macros" }
+syn = { version = "3.0.3", features = ["full", "extra-traits"] }
