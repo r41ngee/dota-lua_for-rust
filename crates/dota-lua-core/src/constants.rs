@@ -1,3 +1,5 @@
+//! Constants found in Dota 2 Lua API
+
 pub const DOTA_ITEM_INVENTORY_SIZE: i32 = 9;
 pub const DOTA_ITEM_MAX: i32 = 25;
 pub const DOTA_ITEM_STASH_MAX: i32 = 15;

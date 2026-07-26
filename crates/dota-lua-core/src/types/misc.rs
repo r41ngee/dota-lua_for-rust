@@ -9,7 +9,7 @@ impl CScriptHTTPResponse {
     pub fn new() -> Self { unimplemented!() }
     pub fn Body(&self) -> String { unimplemented!() }
     pub fn Request(&self) -> CScriptHTTPRequest { unimplemented!() }
-    pub fn StatusCode(&self) -> i32 { unimplemented!() }
+    pub fn StatusCode(&self) -> f64 { unimplemented!() }
 }
 
 #[allow(non_snake_case)]
@@ -21,12 +21,12 @@ pub struct CScriptHTTPRequest;
 impl CScriptHTTPRequest {
     pub fn CreateHTTPRequest(method: String, url: String) -> CScriptHTTPRequest { unimplemented!() }
     pub fn CreateHTTPRequestScriptVM(method: String, url: String) -> CScriptHTTPRequest { unimplemented!() }
-    pub fn SetHTTPRequestAbsoluteTimeoutMS(&self, absolute_timeout_ms: i32) { unimplemented!() }
-    pub fn SetHTTPRequestContentLength(&self, content_length: i32) { unimplemented!() }
+    pub fn SetHTTPRequestAbsoluteTimeoutMS(&self, absolute_timeout_ms: f64) { unimplemented!() }
+    pub fn SetHTTPRequestContentLength(&self, content_length: f64) { unimplemented!() }
     pub fn SetHTTPRequestCookie(&self, cookie_name: String, cookie_value: String) { unimplemented!() }
     pub fn SetHTTPRequestGetOrPostParameter(&self, param_name: String, param_value: String) { unimplemented!() }
     pub fn SetHTTPRequestHeader(&self, header_name: String, header_value: String) { unimplemented!() }
-    pub fn SetHTTPRequestNetworkActivityTimeout(&self, network_activity_timeout: i32) { unimplemented!() }
+    pub fn SetHTTPRequestNetworkActivityTimeout(&self, network_activity_timeout: f64) { unimplemented!() }
     pub fn SetHTTPRequestRawPostBody(&self, body: String) { unimplemented!() }
     pub fn Send(&self, completion_callback: crate::types::Function) -> CScriptHTTPResponse { unimplemented!() }
 }
@@ -46,7 +46,7 @@ pub struct CScriptUniformRandomStream;
 
 impl CScriptUniformRandomStream {
     pub fn RandomFloat(&self, fl_min: f64, fl_max: f64) -> f64 { unimplemented!() }
-    pub fn RandomInt(&self, n_min: i32, n_max: i32) -> i32 { unimplemented!() }
+    pub fn RandomInt(&self, n_min: f64, n_max: f64) -> f64 { unimplemented!() }
 }
 
 #[allow(non_snake_case)]
@@ -54,7 +54,7 @@ impl CScriptUniformRandomStream {
 pub struct CSceneEntity;
 
 impl CSceneEntity {
-    pub fn AddBroadcastTeamTarget(&self, arg1: i32) { unimplemented!() }
+    pub fn AddBroadcastTeamTarget(&self, arg1: f64) { unimplemented!() }
     pub fn Cancel(&self) { unimplemented!() }
     pub fn EstimateLength(&self) -> f64 { unimplemented!() }
     pub fn FindCamera(&self) -> crate::types::Any { unimplemented!() }
@@ -62,7 +62,7 @@ impl CSceneEntity {
     pub fn IsPaused(&self) -> bool { unimplemented!() }
     pub fn IsPlayingBack(&self) -> bool { unimplemented!() }
     pub fn LoadSceneFromString(&self, arg1: String, arg2: String) -> bool { unimplemented!() }
-    pub fn RemoveBroadcastTeamTarget(&self, arg1: i32) { unimplemented!() }
+    pub fn RemoveBroadcastTeamTarget(&self, arg1: f64) { unimplemented!() }
     pub fn Start(&self, arg1: CBaseEntity) { unimplemented!() }
 }
 

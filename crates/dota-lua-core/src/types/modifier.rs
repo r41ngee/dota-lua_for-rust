@@ -6,7 +6,7 @@ use super::npc::BaseNpc;
 pub struct CBaseBuff;
 
 impl CBaseBuff {
-    pub fn AddParticle(&self, i: i32, b_destroy_immediately: bool, b_status_effect: bool, i_priority: i32, b_hero_effect: bool, b_overhead_effect: bool) { unimplemented!() }
+    pub fn AddParticle(&self, i: f64, b_destroy_immediately: bool, b_status_effect: bool, i_priority: f64, b_hero_effect: bool, b_overhead_effect: bool) { unimplemented!() }
     pub fn DecrementStackCount(&self) { unimplemented!() }
     pub fn Destroy(&self) { unimplemented!() }
     pub fn ForceRefresh(&self) { unimplemented!() }
@@ -21,11 +21,11 @@ impl CBaseBuff {
     pub fn GetName(&self) -> String { unimplemented!() }
     pub fn GetParent(&self) -> BaseNpc { unimplemented!() }
     pub fn GetRemainingTime(&self) -> f64 { unimplemented!() }
-    pub fn GetStackCount(&self) -> i32 { unimplemented!() }
-    pub fn HasFunction(&self, i_function: i32) -> bool { unimplemented!() }
+    pub fn GetStackCount(&self) -> f64 { unimplemented!() }
+    pub fn HasFunction(&self, i_function: f64) -> bool { unimplemented!() }
     pub fn IncrementStackCount(&self) { unimplemented!() }
     pub fn IsStunDebuff(&self) -> bool { unimplemented!() }
     pub fn SetDuration(&self, fl_duration: f64, b_inform_client: bool) { unimplemented!() }
-    pub fn SetStackCount(&self, i_count: i32) { unimplemented!() }
+    pub fn SetStackCount(&self, i_count: f64) { unimplemented!() }
     pub fn StartIntervalThink(&self, fl_interval: f64) { unimplemented!() }
 }

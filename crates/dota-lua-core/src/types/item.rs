@@ -10,13 +10,13 @@ pub struct CDOTA_Item;
 impl CDOTA_Item {
     pub fn CanBeUsedOutOfInventory(&self) -> bool { unimplemented!() }
     pub fn GetContainer(&self) -> super::misc::CBaseItemPhysical { unimplemented!() }
-    pub fn GetCost(&self) -> i32 { unimplemented!() }
-    pub fn GetCurrentCharges(&self) -> i32 { unimplemented!() }
-    pub fn GetInitialCharges(&self) -> i32 { unimplemented!() }
-    pub fn GetItemState(&self) -> i32 { unimplemented!() }
+    pub fn GetCost(&self) -> f64 { unimplemented!() }
+    pub fn GetCurrentCharges(&self) -> f64 { unimplemented!() }
+    pub fn GetInitialCharges(&self) -> f64 { unimplemented!() }
+    pub fn GetItemState(&self) -> f64 { unimplemented!() }
     pub fn GetPurchaseTime(&self) -> f64 { unimplemented!() }
     pub fn GetPurchaser(&self) -> BaseNpc { unimplemented!() }
-    pub fn GetShareability(&self) -> i32 { unimplemented!() }
+    pub fn GetShareability(&self) -> f64 { unimplemented!() }
     pub fn IsAlertableItem(&self) -> bool { unimplemented!() }
     pub fn IsCastOnPickup(&self) -> bool { unimplemented!() }
     pub fn IsCombinable(&self) -> bool { unimplemented!() }
@@ -38,13 +38,13 @@ impl CDOTA_Item {
     pub fn RequiresCharges(&self) -> bool { unimplemented!() }
     pub fn SetCanBeUsedOutOfInventory(&self, b_value: bool) { unimplemented!() }
     pub fn SetCastOnPickup(&self, b_cast_on_pick_up: bool) { unimplemented!() }
-    pub fn SetCurrentCharges(&self, i_charges: i32) { unimplemented!() }
+    pub fn SetCurrentCharges(&self, i_charges: f64) { unimplemented!() }
     pub fn SetDroppable(&self, b_droppable: bool) { unimplemented!() }
-    pub fn SetItemState(&self, i_state: i32) { unimplemented!() }
+    pub fn SetItemState(&self, i_state: f64) { unimplemented!() }
     pub fn SetPurchaseTime(&self, fl_time: f64) { unimplemented!() }
     pub fn SetPurchaser(&self, h_purchaser: BaseNpc) { unimplemented!() }
     pub fn SetSellable(&self, b_sellable: bool) { unimplemented!() }
-    pub fn SetShareability(&self, i_shareability: i32) { unimplemented!() }
+    pub fn SetShareability(&self, i_shareability: f64) { unimplemented!() }
     pub fn SetStacksWithOtherOwners(&self, b_stacks_with_other_owners: bool) { unimplemented!() }
     pub fn SpendCharge(&self) { unimplemented!() }
     pub fn StacksWithOtherOwners(&self) -> bool { unimplemented!() }
@@ -73,23 +73,23 @@ impl CBaseItemDataDriven {
 pub struct CBaseItemLua;
 
 impl CBaseItemLua {
-    pub fn CastFilterResult(&self) -> i32 { unimplemented!() }
-    pub fn CastFilterResultLocation(&self, v_location: Vector) -> i32 { unimplemented!() }
-    pub fn CastFilterResultTarget(&self, h_target: BaseNpc) -> i32 { unimplemented!() }
+    pub fn CastFilterResult(&self) -> f64 { unimplemented!() }
+    pub fn CastFilterResultLocation(&self, v_location: Vector) -> f64 { unimplemented!() }
+    pub fn CastFilterResultTarget(&self, h_target: BaseNpc) -> f64 { unimplemented!() }
     pub fn GetAssociatedPrimaryAbilities(&self) -> String { unimplemented!() }
     pub fn GetAssociatedSecondaryAbilities(&self) -> String { unimplemented!() }
     pub fn GetBehavior(&self) -> i64 { unimplemented!() }
-    pub fn GetCastRange(&self, v_location: Vector, h_target: BaseNpc) -> i32 { unimplemented!() }
+    pub fn GetCastRange(&self, v_location: Vector, h_target: BaseNpc) -> f64 { unimplemented!() }
     pub fn GetChannelTime(&self) -> f64 { unimplemented!() }
-    pub fn GetChannelledManaCostPerSecond(&self, i_level: i32) -> i32 { unimplemented!() }
-    pub fn GetConceptRecipientType(&self) -> i32 { unimplemented!() }
-    pub fn GetCooldown(&self, i_level: i32) -> f64 { unimplemented!() }
+    pub fn GetChannelledManaCostPerSecond(&self, i_level: f64) -> f64 { unimplemented!() }
+    pub fn GetConceptRecipientType(&self) -> f64 { unimplemented!() }
+    pub fn GetCooldown(&self, i_level: f64) -> f64 { unimplemented!() }
     pub fn GetCustomCastError(&self) -> String { unimplemented!() }
     pub fn GetCustomCastErrorLocation(&self, v_location: Vector) -> String { unimplemented!() }
     pub fn GetCustomCastErrorTarget(&self, h_target: BaseNpc) -> String { unimplemented!() }
-    pub fn GetGoldCost(&self, i_level: i32) -> i32 { unimplemented!() }
+    pub fn GetGoldCost(&self, i_level: f64) -> f64 { unimplemented!() }
     pub fn GetIntrinsicModifierName(&self) -> String { unimplemented!() }
-    pub fn GetManaCost(&self, i_level: i32) -> i32 { unimplemented!() }
+    pub fn GetManaCost(&self, i_level: f64) -> f64 { unimplemented!() }
     pub fn GetPlaybackRateOverride(&self) -> f64 { unimplemented!() }
     pub fn IsHiddenAbilityCastable(&self) -> bool { unimplemented!() }
     pub fn IsHiddenWhenStolen(&self) -> bool { unimplemented!() }
@@ -114,5 +114,5 @@ impl CBaseItemLua {
     pub fn OnUnStolen(&self) { unimplemented!() }
     pub fn OnUpgrade(&self) { unimplemented!() }
     pub fn ProcsMagicStick(&self) -> bool { unimplemented!() }
-    pub fn SpeakTrigger(&self) -> i32 { unimplemented!() }
+    pub fn SpeakTrigger(&self) -> f64 { unimplemented!() }
 }

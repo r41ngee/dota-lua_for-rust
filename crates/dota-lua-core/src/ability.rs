@@ -1,3 +1,5 @@
+//! Module controlling [Ability] trait
+
 use crate::enums;
 use crate::types;
 use crate::types::event;
@@ -21,7 +23,7 @@ pub trait Ability<ProjectleDT = ()> {
     /// Determine whether an issued command on a target is valid.
     fn CastFilterResultTarget(target: types::npc::BaseNpc) -> enums::unit_filter::UnitFilterResult { enums::unit_filter::UnitFilterResult::UF_SUCCESS }
     /// `-1` level represents current level
-    fn GetAbilityChargeRestoreTime(level: i32) -> f64 { 0.0 }
+    fn GetAbilityChargeRestoreTime(level: f64) -> f64 { 0.0 }
     /// Allows code overriding of the ability texture shown in the HUD.
     fn GetAbilityTextureName() -> String { unimplemented!() }
     /// Controls the size of the AOE casting cursor.
@@ -35,15 +37,15 @@ pub trait Ability<ProjectleDT = ()> {
     /// Return cast point of this ability (seconds).
     fn GetCastPoint() -> f64 { 0.0 }
     /// Return cast range of this ability.
-    fn GetCastRange() -> i32 { 0 }
+    fn GetCastRange() -> f64 { 0.0 }
     /// Return health cost per second of channeling at the given level (-1 is current).
-    fn GetChannelledHealthCostPerSecond(level: i32) -> i32 { 0 } // -1 is current level
+    fn GetChannelledHealthCostPerSecond(level: f64) -> f64 { 0.0 } // -1 is current level
     /// Return mana cost at the given level per second while channeling (-1 is current).
-    fn GetChannelledManaCostPerSecond(level: i32) -> i32 { 0 } // -1 is current level
+    fn GetChannelledManaCostPerSecond(level: f64) -> f64 { 0.0 } // -1 is current level
     /// Return the channel time of this ability.
     fn GetChannelTime() -> f64 { 0.0 }
     /// Return cooldown of this ability.
-    fn GetCooldown(level: i32) -> f64 { 0.0 }
+    fn GetCooldown(level: f64) -> f64 { 0.0 }
     /// Return the error string of a failed command with no target.
     fn GetCustomCastError() -> String { unimplemented!() }
     /// Return the error string of a failed command on a location.
@@ -51,13 +53,13 @@ pub trait Ability<ProjectleDT = ()> {
     /// Return the error string of a failed command on a target.
     fn GetCustomCastErrorTarget(target: types::npc::BaseNpc) -> String {unimplemented!()}
     /// Return gold cost at the given level (-1 is current).
-    fn GetGoldCost(level: i32) -> i32 { 0 }
+    fn GetGoldCost(level: f64) -> f64 { 0.0 }
     /// Return health cost at the given level (-1 is current).
-    fn GetHealthCost(level: i32) -> i32 { 0 }
+    fn GetHealthCost(level: f64) -> f64 { 0.0 }
     /// Returns the name of the modifier applied passively by this ability.
     fn GetIntrinsicModifierName() -> &'static str { unimplemented!() }
     /// Return mana cost at the given level (-1 is current).
-    fn GetManaCost(level: i32) -> i32 { 0 }
+    fn GetManaCost(level: f64) -> f64 { 0.0 }
     /// Is this ability an Attribute Bonus.
     fn IsAttributeBonus() -> bool { unimplemented!() }
     /// Returns true if this ability is hidden when stolen by Spell Steal.

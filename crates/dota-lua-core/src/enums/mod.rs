@@ -1,6 +1,7 @@
 pub mod unit_filter;
 pub mod modifier;
 pub mod ability;
+pub mod unit_target;
 
 #[repr(u32)]
 #[allow(non_camel_case_types)]
