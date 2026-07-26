@@ -154,7 +154,7 @@ impl CDOTAGamerules {
     pub fn GetCustomGameTeamMaxPlayers(&self, team: i32) -> i32 { unimplemented!() }
     pub fn GetDOTATime(&self, include_pre_game: bool, include_negative_time: bool) -> f64 { unimplemented!() }
     pub fn GetDifficulty(&self) -> i32 { unimplemented!() }
-    pub fn GetDroppedItem(&self, index: i32) -> super::item::CBaseItem { unimplemented!() }
+    pub fn GetDroppedItem(&self, index: i32) -> super::item::CDOTA_Item { unimplemented!() }
     pub fn GetGameFrameTime(&self) -> f64 { unimplemented!() }
     pub fn GetGameModeEntity(&self) -> CDOTABaseGameMode { unimplemented!() }
     pub fn GetGameSessionConfigValue(&self, arg1: String, arg2: String) -> String { unimplemented!() }

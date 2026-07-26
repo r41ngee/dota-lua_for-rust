@@ -82,7 +82,7 @@ impl CEnvEntityMaker {
 pub struct CBaseItemPhysical;
 
 impl CBaseItemPhysical {
-    pub fn GetContainedItem(&self) -> super::item::CBaseItem { unimplemented!() }
+    pub fn GetContainedItem(&self) -> super::item::CDOTA_Item { unimplemented!() }
     pub fn GetCreationTime(&self) -> f64 { unimplemented!() }
-    pub fn SetContainedItem(&self, h_item: super::item::CBaseItem) { unimplemented!() }
+    pub fn SetContainedItem(&self, h_item: super::item::CDOTA_Item) { unimplemented!() }
 }

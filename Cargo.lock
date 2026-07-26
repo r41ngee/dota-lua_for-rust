@@ -9,8 +9,39 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b588b76d00fde79687d7646a9b5bdf3cc0f655e0bbd080335a95d7e96f3587da"
 
 [[package]]
+name = "dota-lua"
+version = "0.1.0"
+dependencies = [
+ "dota-lua-core",
+ "dota-lua-macros",
+]
+
+[[package]]
 name = "dota-lua-core"
 version = "0.1.0"
 dependencies = [
  "bitflags",
+ "dota-lua-macros",
 ]
+
+[[package]]
+name = "dota-lua-macros"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2",
+]
+
+[[package]]
+name = "proc-macro2"
+version = "1.0.107"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9"
+dependencies = [
+ "unicode-ident",
+]
+
+[[package]]
+name = "unicode-ident"
+version = "1.0.24"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"

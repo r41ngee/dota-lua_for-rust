@@ -8,8 +8,8 @@ pub struct BaseNpc;
 #[allow(non_snake_case)]
 impl BaseNpc {
     pub fn AddAbility(&self, ability_name: String) -> super::ability::CBaseAbility { unimplemented!() }
-    pub fn AddItem(&self, item_to_add: super::item::CBaseItem) -> super::item::CBaseItem { unimplemented!() }
-    pub fn AddItemByName(&self, item_name: String) -> super::item::CBaseItem { unimplemented!() }
+    pub fn AddItem(&self, item_to_add: super::item::CDOTA_Item) -> super::item::CDOTA_Item { unimplemented!() }
+    pub fn AddItemByName(&self, item_name: String) -> super::item::CDOTA_Item { unimplemented!() }
     pub fn AddNewModifier(&self, caster: Option<BaseNpc>, source_ability: Option<super::ability::CBaseAbility>, modifier_name: String, modifier_table: crate::types::Table) -> super::modifier::CBaseBuff { unimplemented!() }
     pub fn AddNoDraw(&self) { unimplemented!() }
     pub fn AddSpeechBubble(&self, i_bubble: i32, psz_speech: String, fl_duration: f64, un_offset_x: i32, un_offset_y: i32) { unimplemented!() }
@@ -26,16 +26,16 @@ impl BaseNpc {
     pub fn CastAbilityOnTarget(&self, h_target: BaseNpc, h_ability: super::ability::CBaseAbility, i_player_index: i32) { unimplemented!() }
     pub fn CastAbilityToggle(&self, h_ability: super::ability::CBaseAbility, i_player_index: i32) { unimplemented!() }
     pub fn DestroyAllSpeechBubbles(&self) { unimplemented!() }
-    pub fn DisassembleItem(&self, h_item: super::item::CBaseItem) { unimplemented!() }
-    pub fn DropItemAtPosition(&self, v_dest: Vector, h_item: super::item::CBaseItem) { unimplemented!() }
-    pub fn DropItemAtPositionImmediate(&self, h_item: super::item::CBaseItem, v_position: Vector) { unimplemented!() }
-    pub fn EjectItemFromStash(&self, h_item: super::item::CBaseItem) { unimplemented!() }
+    pub fn DisassembleItem(&self, h_item: super::item::CDOTA_Item) { unimplemented!() }
+    pub fn DropItemAtPosition(&self, v_dest: Vector, h_item: super::item::CDOTA_Item) { unimplemented!() }
+    pub fn DropItemAtPositionImmediate(&self, h_item: super::item::CDOTA_Item, v_position: Vector) { unimplemented!() }
+    pub fn EjectItemFromStash(&self, h_item: super::item::CDOTA_Item) { unimplemented!() }
     pub fn FaceTowards(&self, v_target: Vector) { unimplemented!() }
     pub fn FadeGesture(&self, n_activity: i32) { unimplemented!() }
     pub fn FindAbilityByName(&self, ability_name: String) -> super::ability::CBaseAbility { unimplemented!() }
     pub fn FindAllModifiers(&self) -> Vec<super::modifier::CBaseBuff> { unimplemented!() }
     pub fn FindAllModifiersByName(&self, name: String) -> Vec<super::modifier::CBaseBuff> { unimplemented!() }
-    pub fn FindItemInInventory(&self, item_name: String) -> super::item::CBaseItem { unimplemented!() }
+    pub fn FindItemInInventory(&self, item_name: String) -> super::item::CDOTA_Item { unimplemented!() }
     pub fn FindModifierByName(&self, modifier_name: String) -> super::modifier::CBaseBuff { unimplemented!() }
     pub fn FindModifierByNameAndCaster(&self, modifier_name: String, caster: BaseNpc) -> super::modifier::CBaseBuff { unimplemented!() }
     pub fn ForceKill(&self, b_reincarnate: bool) { unimplemented!() }
@@ -86,7 +86,7 @@ impl BaseNpc {
     pub fn GetIdealSpeedNoSlows(&self) -> f64 { unimplemented!() }
     pub fn GetIncreasedAttackSpeed(&self) -> f64 { unimplemented!() }
     pub fn GetInitialGoalEntity(&self) -> CBaseEntity { unimplemented!() }
-    pub fn GetItemInSlot(&self, slot: i32) -> super::item::CBaseItem { unimplemented!() }
+    pub fn GetItemInSlot(&self, slot: i32) -> super::item::CDOTA_Item { unimplemented!() }
     pub fn GetLastAttackTime(&self) -> f64 { unimplemented!() }
     pub fn GetLastIdleChangeTime(&self) -> f64 { unimplemented!() }
     pub fn GetLevel(&self) -> i32 { unimplemented!() }
@@ -203,7 +203,7 @@ impl BaseNpc {
     pub fn ManageModelChanges(&self) { unimplemented!() }
     pub fn ModifyHealth(&self, i_desired_health_value: i32, h_ability: super::ability::CBaseAbility, b_lethal: bool, i_additional_flags: i32) { unimplemented!() }
     pub fn MoveToNPC(&self, h_npc: BaseNpc) { unimplemented!() }
-    pub fn MoveToNPCToGiveItem(&self, h_npc: BaseNpc, h_item: super::item::CBaseItem) { unimplemented!() }
+    pub fn MoveToNPCToGiveItem(&self, h_npc: BaseNpc, h_item: super::item::CDOTA_Item) { unimplemented!() }
     pub fn MoveToPosition(&self, v_dest: Vector) { unimplemented!() }
     pub fn MoveToPositionAggressive(&self, v_dest: Vector) { unimplemented!() }
     pub fn MoveToTargetToAttack(&self, h_target: BaseNpc) { unimplemented!() }
@@ -217,8 +217,8 @@ impl BaseNpc {
     pub fn PassivesDisabled(&self) -> bool { unimplemented!() }
     pub fn PatrolToPosition(&self, v_dest: Vector) { unimplemented!() }
     pub fn PerformAttack(&self, h_target: BaseNpc, b_use_cast_attack_orb: bool, b_process_procs: bool, b_skip_cooldown: bool, b_ignore_invis: bool, b_use_projectile: bool, b_fake_attack: bool, b_never_miss: bool) { unimplemented!() }
-    pub fn PickupDroppedItem(&self, h_item: super::item::CBaseItem) { unimplemented!() }
-    pub fn PickupRune(&self, h_item: super::item::CBaseItem) { unimplemented!() }
+    pub fn PickupDroppedItem(&self, h_item: super::item::CDOTA_Item) { unimplemented!() }
+    pub fn PickupRune(&self, h_item: super::item::CDOTA_Item) { unimplemented!() }
     pub fn PlayVCD(&self, p_vcd: String) { unimplemented!() }
     pub fn ProvidesVision(&self) -> bool { unimplemented!() }
     pub fn Purge(&self, b_remove_positive_buffs: bool, b_remove_debuffs: bool, b_frame_only: bool, b_remove_stuns: bool, b_remove_exceptions: bool) { unimplemented!() }
@@ -226,13 +226,13 @@ impl BaseNpc {
     pub fn RemoveAbility(&self, psz_ability_name: String) { unimplemented!() }
     pub fn RemoveGesture(&self, n_activity: i32) { unimplemented!() }
     pub fn RemoveHorizontalMotionController(&self, h_buff: super::modifier::CBaseBuff) { unimplemented!() }
-    pub fn RemoveItem(&self, h_item: super::item::CBaseItem) { unimplemented!() }
+    pub fn RemoveItem(&self, h_item: super::item::CDOTA_Item) { unimplemented!() }
     pub fn RemoveModifierByName(&self, psz_script_name: String) { unimplemented!() }
     pub fn RemoveModifierByNameAndCaster(&self, psz_script_name: String, h_caster: BaseNpc) { unimplemented!() }
     pub fn RemoveNoDraw(&self) { unimplemented!() }
     pub fn RemoveVerticalMotionController(&self, h_buff: super::modifier::CBaseBuff) { unimplemented!() }
     pub fn RespawnUnit(&self) { unimplemented!() }
-    pub fn SellItem(&self, h_item: super::item::CBaseItem) { unimplemented!() }
+    pub fn SellItem(&self, h_item: super::item::CDOTA_Item) { unimplemented!() }
     pub fn SetAbilityByIndex(&self, h_ability: super::ability::CBaseAbility, i_index: i32) { unimplemented!() }
     pub fn SetAcquisitionRange(&self, n_range: i32) { unimplemented!() }
     pub fn SetAdditionalBattleMusicWeight(&self, fl_weight: f64) { unimplemented!() }
@@ -285,7 +285,7 @@ impl BaseNpc {
     pub fn StopFacing(&self) { unimplemented!() }
     pub fn SwapAbilities(&self, p_ability_name1: String, p_ability_name2: String, b_enable1: bool, b_enable2: bool) { unimplemented!() }
     pub fn SwapItems(&self, n_slot1: i32, n_slot2: i32) { unimplemented!() }
-    pub fn TakeItem(&self, h_item: super::item::CBaseItem) -> super::item::CBaseItem { unimplemented!() }
+    pub fn TakeItem(&self, h_item: super::item::CDOTA_Item) -> super::item::CDOTA_Item { unimplemented!() }
     pub fn TimeUntilNextAttack(&self) -> f64 { unimplemented!() }
     pub fn TriggerModifierDodge(&self) -> bool { unimplemented!() }
     pub fn TriggerSpellAbsorb(&self, h_ability: super::ability::CBaseAbility) -> bool { unimplemented!() }

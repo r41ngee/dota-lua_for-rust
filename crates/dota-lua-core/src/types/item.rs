@@ -3,10 +3,11 @@ use super::npc::BaseNpc;
 use super::vector::Vector;
 
 #[allow(non_snake_case)]
+#[allow(non_camel_case_types)]
 #[allow(unused)]
-pub struct CBaseItem;
+pub struct CDOTA_Item;
 
-impl CBaseItem {
+impl CDOTA_Item {
     pub fn CanBeUsedOutOfInventory(&self) -> bool { unimplemented!() }
     pub fn GetContainer(&self) -> super::misc::CBaseItemPhysical { unimplemented!() }
     pub fn GetCost(&self) -> i32 { unimplemented!() }
@@ -102,7 +103,7 @@ impl CBaseItemLua {
     pub fn OnHeroDiedNearby(&self, unit: BaseNpc, attacker: BaseNpc, event: crate::types::Table) { unimplemented!() }
     pub fn OnHeroLevelUp(&self) { unimplemented!() }
     pub fn OnInventoryContentsChanged(&self) { unimplemented!() }
-    pub fn OnItemEquipped(&self, h_item: CBaseItem) { unimplemented!() }
+    pub fn OnItemEquipped(&self, h_item: CDOTA_Item) { unimplemented!() }
     pub fn OnOwnerDied(&self) { unimplemented!() }
     pub fn OnOwnerSpawned(&self) { unimplemented!() }
     pub fn OnProjectileHit(&self, h_target: Option<BaseNpc>, v_location: Vector) -> bool { unimplemented!() }

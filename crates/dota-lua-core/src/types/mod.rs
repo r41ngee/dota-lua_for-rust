@@ -5,6 +5,7 @@ pub mod item;
 pub mod modifier;
 pub mod manager;
 pub mod misc;
+pub mod event;
 pub mod ability;
 
 // Stub types for Lua API

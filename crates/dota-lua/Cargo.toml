@@ -1,8 +1,8 @@
 [package]
-name = "dota-lua-core"
+name = "dota-lua"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-bitflags = "2.13.1"
+dota-lua-core = { version = "0.1.0", path = "../dota-lua-core" }
 dota-lua-macros = { version = "0.1.0", path = "../dota-lua-macros" }
